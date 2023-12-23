@@ -1,23 +1,25 @@
-
+const prompt = require('prompt-sync');
 
 class createTodo{
-    createTodos(){
 
-    }
 }
 
-class titleTodo{
+class TitleTodo{
     constructor(title){
         this.title = title;
     }
 
-    printTitleTodo(){
-        console.log(title);
-    }
+    
 }
 
-const todos = {
-    title: new titleTodo('Comprar castanha')
-}
+const todos = [
+    new TitleTodo('Comprar castanha'),
 
-todos.title.printTitleTodo();
+]
+
+
+
+const new_todo_title = prompt('Please choose a title for your todo: ');
+
+
+
