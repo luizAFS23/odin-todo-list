@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 
-class createTodo{
+class Todo{
     constructor(title, description){
         this.title = title;
         this.description = description;
@@ -11,15 +11,12 @@ class createTodo{
         todos.push(this.description);
     }
 
-}
-
-class ShowTodo{
-
-    showTodos(){
-        console.log('Title: ', todos.title);
-        console.log('Description: ', todos.description)
+    showTodo(){
+        console.log('Title: ', this.title);
+        console.log('Description: ', this.description);
     }
 }
+
 
 
 class TitleTodo{
@@ -49,8 +46,7 @@ const todos = [];
 
 const new_todo_title = prompt('Please choose a title for your todo: ');
 const new_todo_description = prompt('Please choose a description for your todo: ');
-const todo = new createTodo(new_todo_title, new_todo_description);
-
-console.log(todo);
+const todo = new Todo(new_todo_title, new_todo_description);
 
 
+todo.showTodo();
