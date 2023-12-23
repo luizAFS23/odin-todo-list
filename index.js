@@ -13,6 +13,15 @@ class createTodo{
 
 }
 
+class ShowTodo{
+
+    showTodos(){
+        console.log('Title: ', todos.title);
+        console.log('Description: ', todos.description)
+    }
+}
+
+
 class TitleTodo{
     constructor(title){
         this.title = title;
