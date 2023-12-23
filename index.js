@@ -18,28 +18,6 @@ class Todo{
 }
 
 
-
-class TitleTodo{
-    constructor(title){
-        this.title = title;
-    }
-
-    returnTodoTitle(){
-        return this.title;
-    }
-    
-}
-
-class TodoDescription{
-    constructor(description){
-        this.description = description;
-    }
-
-    returnTodoDescription(){
-        return this.description;
-    }
-}
-
 const todos = [];
 
 
