@@ -26,9 +26,9 @@ class Todo{
 
 const todos = [];
 
-const titleform = document.getElementById('title');
-const descriptionform = document.getElementById('description');
-const duedateform = document.getElementById('duedate');
+const titleform = document.getElementById('title').value;
+const descriptionform = document.getElementById('description').value;
+const duedateform = document.getElementById('duedate').value;
 const todo_ul_container = document.querySelector('.todo-ul-container');
 const form = document.getElementById('form');
 
