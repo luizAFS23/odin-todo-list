@@ -6,10 +6,20 @@
     <title>Odin Todo List</title>
 </head>
 <body>
-    
-    <h1>Welcome to the Odin Todo List App</h1>
+    <div class="container">
+        <h1>Welcome to the Odin Todo List App</h1>
+        <h2>Please enter the information about your new todo: </h2> 
+        <form onsubmit="createTodo()">
+            <input type="text" id="title" name="title" placeholder="Title"><br>
+            <input type="text" id="title" name="description" placeholder="Description"><br>
+            <input type="date" id="duedate" name="duedate" placeholder="Due Date"><br>
+            <button type="submit">Submit</button>
+        </form>
 
-    
+        <h2>Todos:</h2>
+        <ul class="todo-ul-container"></ul>
+    </div>
+
 
 </body>
 <script src="./index.js"></script>
