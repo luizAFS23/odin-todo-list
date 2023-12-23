@@ -17,7 +17,7 @@ class titleTodo{
 }
 
 const todos = {
-    title: new titleTodo('Comprar castanha');
+    title: new titleTodo('Comprar castanha')
 }
 
 todos.title.printTitleTodo();
