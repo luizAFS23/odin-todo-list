@@ -33,18 +33,6 @@ const button = document.getElementById('button');
 
 const todo = new Todo(titleform, descriptionform, duedateform);
 
-function createTodo(e){
-    e.preventDefault();
-    const obj = {
-        title: titleform,
-        description: descriptionform,
-        duedate: duedateform
-    }
-
-    const todo = new Todo(titleform, descriptionform, duedateform);
-    console.log(obj)
-    
-}
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
