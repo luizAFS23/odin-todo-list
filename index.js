@@ -40,12 +40,6 @@ button.addEventListener('click', (e) => {
     const descriptionform = document.querySelector('.description').value;
     const duedateform = document.querySelector('.duedate').value;
 
-    const obj = {
-        title: titleform,
-        description: descriptionform,
-        duedate: duedateform
-    }
-
     const todo = new Todo(titleform, descriptionform, duedateform);
     for(const key in todo){
         todo_ul_container.innerHTML += `<li>${todo[key]}</li>`;
