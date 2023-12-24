@@ -25,12 +25,15 @@ class Todo{
 
 const todos = [];
 
-const titleform = document.getElementById('title').value;
-const descriptionform = document.getElementById('description').value;
-const duedateform = document.getElementById('duedate').value;
+const titleform = document.querySelector('.title').value;
+const descriptionform = document.querySelector('.description').value;
+const duedateform = document.querySelector('.duedate').value;
 const todo_ul_container = document.querySelector('.todo-ul-container');
 const form = document.getElementById('form');
 
+const todo = new Todo(titleform, descriptionform, duedateform);
+
+console.log(todo);
 function createTodo(){
     const obj = {
         title: titleform,
@@ -38,16 +41,18 @@ function createTodo(){
         duedate: duedateform
     }
 
-    const todo = Object.assign({}, obj);
+    const todo = new Todo(titleform, descriptionform, duedateform);
     todos.push(todo);
+    
 }
 
 function createTodoList(e){
     e.preventDefault();
-    createTodo();
-    todos.forEach(todo => {
-        todo_ul_container.innerHTML += `<li>${todo}</li>`;
-    });
+
+    for(const key in todo){
+        todo_ul_container.innerHTML += `<li>${todo[key]}</li>`;
+        console.log(todo[key]);
+    }
 }
 
 form.addEventListener('submit', (e) => createTodoList(e));
