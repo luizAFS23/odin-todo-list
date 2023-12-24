@@ -29,7 +29,6 @@ const titleform = document.querySelector('.title').value;
 const descriptionform = document.querySelector('.description').value;
 const duedateform = document.querySelector('.duedate').value;
 const todo_ul_container = document.querySelector('.todo-ul-container');
-const form = document.getElementById('form');
 const button = document.getElementById('button');
 
 const todo = new Todo(titleform, descriptionform, duedateform);
