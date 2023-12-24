@@ -46,15 +46,6 @@ function createTodo(e){
     
 }
 
-function createTodoList(e){
-    e.preventDefault();
-    createTodo();
-    // for(const key in todo){
-    //     todo_ul_container.innerHTML += `<li>${todo[key]}</li>`;
-    //     console.log(todo[key]);
-    // }
-}
-
 button.addEventListener('click', (e) => {
     e.preventDefault();
     const titleform = document.querySelector('.title').value;
@@ -68,5 +59,8 @@ button.addEventListener('click', (e) => {
     }
 
     const todo = new Todo(titleform, descriptionform, duedateform);
-    todo_ul_container.innerHTML += `<li>${todo}</li>`;
+    for(const key in todo){
+        todo_ul_container.innerHTML += `<li>${todo[key]}</li>`;
+    }
+    todo_ul_container.innerHTML += `<br>`
 });
