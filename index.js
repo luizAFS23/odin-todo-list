@@ -34,14 +34,15 @@ const form = document.getElementById('form');
 
 function createTodo(){
     const todo = new Todo(titleform, descriptionform, duedateform);
-    todos.push(todo);
+    todo.createaANewTodo();
+    todo.showTodo();
 }
 
 function createTodoList(e){
     e.preventDefault();
     createTodo();
     todos.forEach(todo => {
-        todo_ul_container.outerHTML += `<li>${todo}</li>`;
+        todo_ul_container.innerHTML += `<li>${todo}</li>`;
     });
 }
 
