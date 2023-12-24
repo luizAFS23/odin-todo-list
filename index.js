@@ -32,9 +32,14 @@ const todo_ul_container = document.querySelector('.todo-ul-container');
 const form = document.getElementById('form');
 
 function createTodo(){
-    const todo = new Todo(titleform, descriptionform, duedateform);
-    todo.createaANewTodo();
-    todo.showTodo();
+    const obj = {
+        title: titleform,
+        description: descriptionform,
+        duedate: duedateform
+    }
+
+    const todo = Object.assign({}, obj);
+    todos.push(todo);
 }
 
 function createTodoList(e){
