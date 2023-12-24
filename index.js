@@ -23,7 +23,6 @@ class Todo{
     }
 }
 
-
 const todos = [];
 
 const titleform = document.getElementById('title').value;
