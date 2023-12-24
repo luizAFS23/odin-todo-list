@@ -31,8 +31,6 @@ const duedateform = document.querySelector('.duedate').value;
 const todo_ul_container = document.querySelector('.todo-ul-container');
 const button = document.getElementById('button');
 
-const todo = new Todo(titleform, descriptionform, duedateform);
-
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
