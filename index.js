@@ -30,11 +30,12 @@ const descriptionform = document.querySelector('.description').value;
 const duedateform = document.querySelector('.duedate').value;
 const todo_ul_container = document.querySelector('.todo-ul-container');
 const form = document.getElementById('form');
+const button = document.getElementById('button');
 
 const todo = new Todo(titleform, descriptionform, duedateform);
 
-console.log(todo);
-function createTodo(){
+function createTodo(e){
+    e.preventDefault();
     const obj = {
         title: titleform,
         description: descriptionform,
@@ -42,17 +43,31 @@ function createTodo(){
     }
 
     const todo = new Todo(titleform, descriptionform, duedateform);
-    todos.push(todo);
+    console.log(obj)
     
 }
 
 function createTodoList(e){
     e.preventDefault();
-
-    for(const key in todo){
-        todo_ul_container.innerHTML += `<li>${todo[key]}</li>`;
-        console.log(todo[key]);
-    }
+    createTodo();
+    // for(const key in todo){
+    //     todo_ul_container.innerHTML += `<li>${todo[key]}</li>`;
+    //     console.log(todo[key]);
+    // }
 }
 
-form.addEventListener('submit', (e) => createTodoList(e));
+button.addEventListener('click', (e) => {
+    e.preventDefault();
+    const titleform = document.querySelector('.title').value;
+    const descriptionform = document.querySelector('.description').value;
+    const duedateform = document.querySelector('.duedate').value;
+
+    const obj = {
+        title: titleform,
+        description: descriptionform,
+        duedate: duedateform
+    }
+
+    const todo = new Todo(titleform, descriptionform, duedateform);
+    todo_ul_container.innerHTML += `<li>${todo}</li>`;
+});
