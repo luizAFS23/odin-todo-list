@@ -6,11 +6,6 @@ class Todo{
         this.duedate = duedate;
     }
 
-    createaANewTodo(){
-        todos.push(this.title);
-        todos.push(this.description);
-        todos.push(this.duedate);
-    }
 
     showTodo(){
         console.log('Title: ', this.title);
