@@ -25,9 +25,6 @@ class Todo{
 
 const todos = [];
 
-const titleform = document.querySelector('.title').value;
-const descriptionform = document.querySelector('.description').value;
-const duedateform = document.querySelector('.duedate').value;
 const todo_ul_container = document.querySelector('.todo-ul-container');
 const button = document.getElementById('button');
 
@@ -43,4 +40,5 @@ button.addEventListener('click', (e) => {
         todo_ul_container.innerHTML += `<li>${todo[key]}</li>`;
     }
     todo_ul_container.innerHTML += `<br>`
+    
 });
