@@ -23,7 +23,6 @@ class Todo{
     }
 }
 
-const todos = [];
 
 const todo_ul_container = document.querySelector('.todo-ul-container');
 const button = document.getElementById('button');
