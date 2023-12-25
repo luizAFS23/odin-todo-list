@@ -6,7 +6,6 @@ class Todo{
         this.duedate = duedate;
     }
 
-
     showTodo(){
         console.log('Title: ', this.title);
         console.log('Description: ', this.description);
